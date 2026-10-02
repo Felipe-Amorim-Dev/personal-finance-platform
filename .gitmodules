@@ -1,0 +1,3 @@
+[submodule "services/personal-finance-identity-service"]
+	path = services/personal-finance-identity-service
+	url = https://github.com/Felipe-Amorim-Dev/personal-finance-identity-service.git
