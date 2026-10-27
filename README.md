@@ -1,79 +1,25 @@
 # Personal Finance Platform
 
-O **Personal Finance Platform** é uma plataforma de controle financeiro pessoal desenvolvida com arquitetura baseada em microsserviços.
+**Work in progress / Em desenvolvimento** — a personal-finance software platform evolving incrementally toward a service-based architecture. This public repository documents and coordinates the work; it does **not** imply all services or apps below are implemented.
 
-O projeto está sendo construído de forma incremental, com foco em boas práticas de arquitetura de software, segurança, observabilidade, automação, análise de dados e inteligência artificial.
+## Currently available
+- Architecture/planning and repository documentation.
+- [Identity Service](https://github.com/Felipe-Amorim-Dev/personal-finance-identity-service): separate .NET identity implementation under active development.
 
-Este repositório representa a versão pública do projeto, destinada a portfólio, estudos e demonstração da arquitetura.
+## Planned capabilities — not necessarily implemented
+Expense and income tracking, accounts, cards, budgets, installments, transaction categorization, recurring transactions, goals, analytics, financial-data imports, a web/mobile experience, and possible AI-assisted workflows.
 
-> Nenhuma credencial, dado financeiro real, segredo de aplicação ou informação de ambiente de produção deve ser armazenado neste repositório.
+## Architecture and technology direction
+- Back-end: C#, ASP.NET Core; independent services as justified by requirements.
+- Identity persistence: **MySQL** (Pomelo EF Core provider), not PostgreSQL.
+- Other infrastructure, clients and integrations are exploratory until implemented and verified.
 
----
+Check the [Identity Service](https://github.com/Felipe-Amorim-Dev/personal-finance-identity-service) for its actual runtime requirements and documented status.
 
-## Objetivos
+## Principles
+- Separate domain and application responsibilities from infrastructure.
+- Use environment variables or local secret storage for keys and connection strings.
+- Avoid uploading real financial or personal data.
+- Add automated verification as components mature.
 
-A plataforma tem como objetivo oferecer recursos para:
-
-- Controle de receitas e despesas;
-- Gerenciamento de contas financeiras;
-- Gerenciamento de cartões de crédito;
-- Controle de parcelas;
-- Categorização de transações;
-- Planejamento de orçamento mensal;
-- Definição de metas financeiras;
-- Gerenciamento de despesas recorrentes;
-- Dashboard financeiro;
-- Importação de dados financeiros;
-- Automação da captura de contas e faturas;
-- Análise histórica de dados financeiros;
-- Assistente financeiro baseado em Inteligência Artificial;
-- Aplicação Web;
-- Aplicação Mobile.
-
----
-
-## Arquitetura
-
-A plataforma utilizará uma arquitetura baseada em microsserviços.
-
-### Microsserviços planejados
-
-- Identity Service
-- Finance Service
-- Automation Service
-- AI Service
-
-### Aplicações
-
-- Angular Web Application
-- React Native Mobile Application
-
-### Tecnologias planejadas
-
-- .NET / ASP.NET Core
-- Angular
-- React Native
-- PostgreSQL
-- MongoDB
-- Docker
-- n8n
-- Databricks
-- OpenAI
-- GitHub Actions
-
----
-
-## Estrutura do repositório
-
-```text
-personal-finance-platform/
-│
-├── docs/
-│   ├── architecture/
-│   ├── diagrams/
-│   └── adr/
-│
-├── services/
-├── frontend/
-├── mobile/
-└── infrastructure/
+**PT-BR:** Plataforma financeira em construção. A lista de funcionalidades expressa o roadmap, não entregas concluídas. O banco escolhido para o serviço de identidade é MySQL.
