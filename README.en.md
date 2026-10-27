@@ -41,6 +41,21 @@ git submodule update --init --recursive
 
 - [personal-finance-identity-service](https://github.com/Felipe-Amorim-Dev/personal-finance-identity-service) — Serviço de identidade e autenticação
 
+## 🏗️ Architecture and service boundaries
+
+The main repository acts as an architectural hub rather than a monolithic deployable application. It organizes `docs/architecture`, `docs/diagrams`, `docs/adr`, the changelog, and Git submodules referencing independently maintained services.
+
+The **Identity Service** is developed in a separate repository and uses .NET 9, MySQL and RabbitMQ. The architectural diagrams also describe a target ecosystem with a gateway and finance, automation and AI services. These diagrams communicate design intent rather than the existence of deployed implementations.
+
+### Design principles
+
+1. Separate domain responsibilities and persistence per service.
+2. Prefer explicit service contracts over direct access to another service's database.
+3. Keep credentials outside source code and capture architectural decisions in ADRs.
+4. Grow integration, observability and deployment infrastructure incrementally.
+
+The architectural assets are under `docs/diagrams/`, including system context, component diagrams and sequence diagrams.
+
 <a id="licenca"></a>
 ## 📄 License
 
