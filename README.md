@@ -41,6 +41,17 @@ git submodule update --init --recursive
 
 - [personal-finance-identity-service](https://github.com/Felipe-Amorim-Dev/personal-finance-identity-service) — Serviço de identidade e autenticação
 
+## 🏗️ Arquitetura e componentes
+
+- Repositório agregador e documental: docs/architecture, docs/diagrams, docs/adr e CHANGELOG.
+- A integração com serviços externos é organizada por submódulos Git; o Identity Service possui repositório próprio.
+- O desenho de componentes representa a arquitetura projetada, não uma implantação integral.
+
+### Fluxo técnico
+
+1. O serviço de identidade isola contas e credenciais; MySQL é seu mecanismo de persistência.
+2. Os diagramas existentes descrevem Gateway, serviços de finanças/automação/IA e integrações propostas.
+
 <a id="licenca"></a>
 ## 📄 Licença
 
